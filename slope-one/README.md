@@ -1,0 +1,2 @@
+This code implements slope one algorithm for item item collaborative filtering explained in http://lemire.me/fr/abstracts/SDM2005.html. This code follows guidelines 
+from http://www.serpentine.com/blog/2006/12/12/collaborative-filtering-made-easy/. Root mean square error for test cases is 1.03136.
