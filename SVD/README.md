@@ -1,0 +1,2 @@
+svd_movielens_gradient_descent.cpp implements svd recommendation algorithm using gradient descent approche. This code follows guidelines from http://sifter.org/~simon/journal/20061211.html and http://www.timelydevelopment.com/demos/NetflixPrize.aspx . This code
+is tested using Movielens 100k dataset and g++ compiler. Root mean square error observed for test case is 0.471307.

@@ -1,0 +1,1 @@
+Root mean square error in test set=0.471307
