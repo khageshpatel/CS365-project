@@ -113,6 +113,7 @@ void Recommender::train()
 
 void Recommender::test()
 {
+  int testCount = 0;
   FILE *fp;
   fp = fopen(TESTING_FILE,"r");
   if(fp==NULL)
@@ -122,11 +123,12 @@ void Recommender::test()
   sq = 0;
   while(fscanf(fp,"%d%d%d%d",&user,&movie,&rating,&time_stamp)!=EOF)
   {
+      testCount++;
     p = Predict_Rating(movie,user);
     err = (1.0*rating-p);
     sq += err*err;
   }
-  rmse = sqrt(sq/N_rating_count);
+  rmse = sqrt(sq/testCount);
   printf("Root mean square error in test set=%f",rmse);
   fclose(fp);
 }
