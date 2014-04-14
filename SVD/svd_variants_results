@@ -24,4 +24,4 @@ svd++ 0.936 (max from u1 to u5)
 #define LRATE             0.001         // Learning rate parameter
 #define K                 0.015         // Regularization parameter used to minimize over-fitting
 #define PseudoCount       25.0
-svd 0.959759 (max from u1 to u5)
+svd 0.942863 (max from u1 to u5)
