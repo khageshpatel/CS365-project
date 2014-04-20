@@ -1,0 +1,27 @@
+u1.base/u1.test always gave the max RMSE
+
+./toolkits/collaborative_filtering/timesvdpp --training=out --validation=oute --max_iter=1171 --quiet=1 --D=5 --lrate=0.0005 --beta=0.0005 --gamma=0.01 --lrate_mult_dec=0.999999
+
+
+timesvd++ 0.929762 (max from u1 to u5)
+
+
+
+./toolkits/collaborative_filtering/svdpp --training=out_notime --validation=oute_notime --biassgd_lambda=1 --biassgd_gamma=0.05 --minval=1 --maxval=5 --max_iter=600 --quiet=1 --D=5 --svdpp_item_bias_step=0.0004 --svdpp_user_bias_step=0.0004 --svdpp_user_factor_step=0.0004 --svdpp_user_factor2_step=0.0004 --svdpp_item_bias_reg=1 --svdpp_user_bias_reg=1 --svdpp_user_factor_reg=5 --svdpp_user_factor2_reg=5 --svdpp_step_dec=1 --nsv=50 --nv=200
+
+svd++ 0.936 (max from u1 to u5)
+
+
+
+#define MAX_RATINGS       100001
+#define MAX_MOVIES        1683
+#define MAX_CUSTOMERS     944
+#define MIN_EPOCH         120
+#define MAX_EPOCH         400
+#define MAX_FEATURES      15
+#define MIN_IMPROVEMENT   0.0001        // Minimum improvement required to continue current feature
+#define INIT              0.1           // Initialization value for features
+#define LRATE             0.001         // Learning rate parameter
+#define K                 0.015         // Regularization parameter used to minimize over-fitting
+#define PseudoCount       25.0
+svd 0.942863 (max from u1 to u5)
